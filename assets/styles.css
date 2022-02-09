@@ -1,0 +1,88 @@
+:root {
+    background-color: black;
+}
+body{
+    margin:0px;
+    font-family: Circular,spotify-circular, Helvetica,Arial,sans-serif;
+    color:white;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+a:hover{
+    color:#1ed760;
+}
+nav{
+    height: 80px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+/* main{
+    height:969px;
+    background-color: rgb( 41,65,171);
+    /* background-image: url(../assets/images/Hero.png);
+    background-size: 100%;
+    background-position:46% 4%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+section img{
+    width: 550px;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.hero-intro {
+    width: 35%;
+    text-align: right;
+    margin: 3.5%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+footer{
+    height:530px;
+    background-color:black;
+}
+.nav-item{
+    padding:28px 17px;
+    font-weight: 700;
+}
+.headline{
+    font-size:156px;
+    font-weight:900;
+    color: #1ed760;
+    position: relative;
+    left:225px;
+    padding-bottom: 40px;
+}
+.headline-first{
+    position: relative;
+    left: -2.5em;
+}
+.sub-headline{
+    color:#1ed760;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+.button-area{
+    text-align: center;
+}
+.button-style{
+    padding:14px 32px;
+    background-color:#1ed760;
+    font-weight: 100;
+}
+.button-style:hover{
+    transform:scale(1.2);
+}
