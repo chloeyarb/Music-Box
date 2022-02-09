@@ -1,24 +1,33 @@
 :root {
     background-color: black;
+    color: white;
 }
 body{
     margin:0px;
     font-family: Circular,spotify-circular, Helvetica,Arial,sans-serif;
     color:white;
 }
+h1 {
+    font-size: 40px;
+    padding-right: 100px;
+}
 a{
     color:white;
     text-decoration:none;
 }
 a:hover{
-    color:#1ed760;
+    color:#ea9527;
 }
 nav{
-    height: 80px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     background-color: black;
+    height: 80px;
     display: flex;
     justify-content: space-around;
     align-items:center;
+    background-attachment: fixed;
 }
 /* main{
     height:969px;
@@ -42,16 +51,35 @@ section img{
 }
 .hero-intro {
     width: 35%;
-    text-align: right;
+    text-align: left;
     margin: 3.5%;
-    color: #fff;
+    margin-top: 15%;
     font-size: 18px;
     line-height: 1.2;
 }
+.hero-intro p {
+    font-style: italic;
+}
+.hero-image {
+    padding: 20px;
+}
 
 footer{
-    height:530px;
+    /* height:530px; */
     background-color:black;
+    width: 80%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}        
+footer h2 {
+    font-size: 30px;   
+    margin: 0;
+}
+footer div {
+    line-height: 1.5;
+    text-align: right;
 }
 .nav-item{
     padding:28px 17px;
