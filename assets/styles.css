@@ -43,13 +43,13 @@ nav{
 section img{
     width: 550px;
 }
-.hero {
+/* .hero {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-}
-.hero-intro {
+} */
+/* .hero-intro {
     width: 35%;
     text-align: left;
     margin: 3.5%;
@@ -62,7 +62,7 @@ section img{
 }
 .hero-image {
     padding: 20px;
-}
+} */
 
 footer{
     /* height:530px; */
@@ -85,7 +85,7 @@ footer div {
     padding:28px 17px;
     font-weight: 700;
 }
-.headline{
+/* .headline{
     font-size:156px;
     font-weight:900;
     color: #1ed760;
@@ -102,7 +102,7 @@ footer div {
     text-align: center;
     font-size: 18px;
     padding-bottom: 40px;
-}
+} */
 .button-area{
     text-align: center;
 }
