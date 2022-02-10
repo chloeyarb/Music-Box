@@ -64,6 +64,9 @@ section img{
     padding: 20px;
 } */
 
+#footer {
+    background-color: black;
+}
 footer{
     /* height:530px; */
     background-color:black;
