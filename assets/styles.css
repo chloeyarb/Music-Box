@@ -103,7 +103,7 @@ footer div {
     font-size: 18px;
     padding-bottom: 40px;
 } */
-/*.button-area{
+.button-area{
     text-align: center;
 }
 .button-style{
@@ -114,4 +114,3 @@ footer div {
 .button-style:hover{
     transform:scale(1.2);
 }
-*/
