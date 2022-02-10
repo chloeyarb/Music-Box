@@ -4,10 +4,16 @@
 }
 body{
     margin:0px;
+   
     font-family: Circular,spotify-circular, Helvetica,Arial,sans-serif;
     color:white;
 }
-h1 {
+#nav-color {
+    background-color: black;
+}
+
+
+/* h1 {
     font-size: 40px;
     padding-right: 100px;
 }
@@ -15,9 +21,7 @@ a{
     color:white;
     text-decoration:none;
 }
-a:hover{
-    color:#ea9527;
-}
+
 nav{
     position: -webkit-sticky;
     position: sticky;
@@ -28,7 +32,7 @@ nav{
     justify-content: space-around;
     align-items:center;
     background-attachment: fixed;
-}
+} */
 /* main{
     height:969px;
     background-color: rgb( 41,65,171);
@@ -38,6 +42,10 @@ nav{
     display:flex;
     justify-content: center;
     align-items: center;
+} */
+
+/* a:hover{
+    color:#ea9527;
 } */
 
 section img{
