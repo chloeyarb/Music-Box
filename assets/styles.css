@@ -12,6 +12,9 @@ body{
     background-color: black;
 }
 
+#results p {
+    white-space: pre-wrap;
+}
 
 /* h1 {
     font-size: 40px;
