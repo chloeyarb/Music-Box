@@ -2,7 +2,7 @@ var inputEl = document.querySelector("#form");
 var searchButton = document.querySelector("#btn");
 var songs = document.querySelector("#songs");
 var artists = document.querySelector("#artist");
-
+var showLyrics = document.querySelector("#results");
 var songName;
 var artistName;
 
@@ -43,3 +43,17 @@ var getLyrics = function (user) {
 
 
 searchButton.addEventListener("click", buttonClickHandler);
+
+
+
+
+var repoEl = document.createElement("a");
+repoEl.classList = "list-item flex-row justify-space-between align-center";
+repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
+
+// create a span element to hold repository name
+var titleEl = document.createElement("span");
+titleEl.textContent = repoName;
+
+// append to container
+repoEl.appendChild(titleEl);
