@@ -34,9 +34,9 @@ var getLyrics = function (user) {
 
       //function call to display
       //create modals
-      var h3 = document.createElement("h3")
+      var h3 = document.createElement("h3");
       var p = document.createElement("p");
-
+// h3.classList = "song-title";
       h3.textContent = songName;
       p.textContent = data.lyrics;
 
