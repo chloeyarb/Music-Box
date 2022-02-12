@@ -43,7 +43,6 @@ var getLyrics = function (user) {
       showLyrics.appendChild(h3);
       showLyrics.appendChild(p);
 
-
     })
 
 
@@ -56,10 +55,5 @@ var getLyrics = function (user) {
 }
 
 
-<<<<<<< HEAD
 
 searchButton.addEventListener("click", buttonClickHandler);
-=======
-searchButton.addEventListener("click", buttonClickHandler);
-
->>>>>>> feature/nicole-js
