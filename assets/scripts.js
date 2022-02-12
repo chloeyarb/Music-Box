@@ -42,4 +42,5 @@ var getLyrics = function (user) {
 }
 
 
+
 searchButton.addEventListener("click", buttonClickHandler);
