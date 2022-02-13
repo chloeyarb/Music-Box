@@ -24,9 +24,6 @@ body{
     color: black;
 }
 
-#results p {
-    white-space: pre-wrap;
-}
 
 input[type="text"] {
     width: 200px;
@@ -106,3 +103,21 @@ nav{
 /* a:hover{
     color:#ea9527;
 } */
+
+#results {
+    display: block;
+    }
+    
+    #results p {
+        white-space: pre-wrap;
+    }
+    
+    #results h3 {
+        font-size: 35px;
+        font-weight: bolder;
+        text-transform: capitalize;
+        color:#EA9629;
+        line-height: 1.5;
+        padding-bottom: 5px;
+    
+    }
