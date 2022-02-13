@@ -54,6 +54,25 @@ var getLyrics = function (user) {
 
 }
 
+var spotifyPlaylist = function () {
 
+  $.ajax({
+    url: 'https://api.spotify.com/v1/me/playlists',
+    method: "GET",
+    data: {
+      name: JSON.stringify({name: "test", public: false})
+    },
+    headers: {
+      'Authorization': 'Bearer ' + "BQAB3JdZIWCIgyPB5GbyRs2Vpt3kIsCBBnwg0TTkCzpMfzgc5XMipDe3EigXW70cNCWBp48M_wwUP2_OC8xqvtxGfCi3KpLf-xHwc5saPd4dxviPWEBJW8gChZL4rr5VqwXDlAOUinCEer79icbVMZKF8n0a6kKBy59r4a20yAMmXlPb",
+      'Content-Type': 'application/json'
+    },
+    success: function(response) {
+      console.log(response);
+    }
+  });
+  
+}
+spotifyPlaylist();
 
 searchButton.addEventListener("click", buttonClickHandler);
+
