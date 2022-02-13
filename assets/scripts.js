@@ -5,7 +5,7 @@ var artists = document.querySelector("#artist");
 var showLyrics = document.querySelector("#results");
 var songName;
 var artistName;
-
+var hiddenArea =document.querySelector("#container");
 
 
 var buttonClickHandler = function (event) {
@@ -14,7 +14,7 @@ var buttonClickHandler = function (event) {
   songName = songs.value.trim();
   artistName = artists.value.trim();
   getLyrics();
-
+  hiddenArea.style.display ='none';
 };
 
 
@@ -57,3 +57,5 @@ var getLyrics = function (user) {
 
 
 searchButton.addEventListener("click", buttonClickHandler);
+
+
