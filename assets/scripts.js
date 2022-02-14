@@ -3,9 +3,14 @@ var searchButton = document.querySelector("#btn");
 var songs = document.querySelector("#songs");
 var artists = document.querySelector("#artist");
 var showLyrics = document.querySelector("#results");
+var showGif = document.querySelector("#gif")
 var songName;
 var artistName;
+<<<<<<< HEAD
 var hiddenArea =document.querySelector("#container");
+=======
+var gif; 
+>>>>>>> feature/nicole-modal
 
 
 var buttonClickHandler = function (event) {
@@ -13,8 +18,13 @@ var buttonClickHandler = function (event) {
   //value needed form api search
   songName = songs.value.trim();
   artistName = artists.value.trim();
+  gif = showGif.value;
   getLyrics();
+<<<<<<< HEAD
   hiddenArea.style.display ='none';
+=======
+  getGifs();
+>>>>>>> feature/nicole-modal
 };
 
 
@@ -47,12 +57,47 @@ var getLyrics = function (user) {
 
 
     .catch(function (error) {
+      // may need to  be more specific with this search
       alert("No lyrics found!");
       console.log(error)
     })
-
-
 }
+
+
+
+
+var getGifs = function (user) {
+  var apiUrl = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&limit=5&api_key=PG8eCoEPPQI1vv1ejnkKITTC5ZvzG1EU";
+
+  fetch(apiUrl)
+    .then(function (response) {
+
+
+      return response.json();
+
+    })
+    .then(function (data) {
+      console.log(data.data)
+
+      var div = document.createElement("div")
+      var p = document.createElement("p");
+
+      div.textContent = artistName;
+      p.textContent = data;
+
+      showGif.appendChild(div);
+      showGif.appendChild(p);
+    })
+    .catch(function (error) {
+    });
+}
+
+
+
+// // may need to  be more specific with this search
+//       alert("No lyrics found!");
+//       console.log(error)
+
 
 
 
