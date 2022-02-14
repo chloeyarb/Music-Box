@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MusicBox</title>
     <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
 </head>
 
 <body>
- 
+
     <nav id="nav-color" class="navbar is-flex-direction-row" role="navigation">
         <header>
             <h1 class="is-size-3 pl-6">MusicBox <i class="fa fa-thin fa-icons fa-sm" id="icon"></i></h1>
@@ -25,76 +26,85 @@
             <a class="navbar-item has-text-white" href="#about">About</a>
             <a class="navbar-item has-text-white" href="#search-music">Search</a>
             <a class="navbar-item has-text-white" href="#your-favorites">Your Favorites</a>
-            
+
         </div>
     </nav>
 
 
-<!--Hero-->
+    <!--Hero-->
     <section id="hero-intro" class="columns is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start">
-    <div class="m-auto column has-text-left">
-        <h2 class="is-size-3 has-text-centered"> Welcome to the lyric library for music enthusiasts! </h2>
-        <p class="is-italic has-text-centered"> Look up the lyrics to your favorite songs</p>
-        <form id="form"action="">
-            <input id="artist" class="input" type="text" placeholder="Artist name...">
-            <input id="songs" class="input" type="text" placeholder="Song title...">
-            <button id="btn" class="button-area button is-small button is-rounded mgl-medium">Search Library</button>
-        </form>
-    </div>
-    <div class="column p-5">
-        <img src="../Music-Box/assets/images/Hero.png" alt="girl with headphones">
-    </div>
-    </section>
-<!--Hero End-->
+        <div class="m-auto column has-text-left">
+            <h2 class="is-size-3 has-text-centered"> Welcome to the lyric library for music enthusiasts! </h2>
+            <p class="is-italic has-text-centered"> Look up the lyrics to your favorite songs</p>
+            <form id="form" action="">
+                <input id="artist" class="input" type="text" placeholder="Artist name...">
+                <input id="songs" class="input" type="text" placeholder="Song title...">
 
-<!--Lyrics appear here-->
-<section id="results">
- 
-</section>
-<!--About Section-->
-  <section class="is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start">
+                <button id="btn" class="button-area button is-small button is-rounded mgl-medium">Search
+                    Library</button>
+            </form>
+
+        </div>
+
+        <div class="column p-5">
+            <img src="../Music-Box/assets/images/Hero.png" alt="girl with headphones">
+        </div>
+    </section>
+
+    <!--modal for error-->
+
+    <!--Hero End-->
+
+    <!--Lyrics appear here-->
+    <section id="results">
+
+    </section>
+    <!--About Section-->
+    <section class="is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start">
         <div id="about" class="m-auto has-text-centered">
             <h2>About</h2>
             <p> Ready to make a free trial?</p>
         </div>
 
-        <div class="columns">    
-          <article class="column">
-              <img />
-              <div>
-                  <p>
-                     Access to a variety of lyrics with their accompanying songs across many genres.
-                  </p>   
-              </div>
-          </article>
-          <article class="column">
-            <img/>
-              <div>
-                  <p>
-                    Learn the lyrics to you favorite songs fast.
-                  </p>
-              </div>
-          </article>
-          <article class="column">
-              <img/>
-              <div>
-                 <p>
-                    Save all your song searches in your library.
-                 </p>
-             </div>
-          </article>
-        </div> 
-      </section>
+        <div class="columns">
+            <article class="column">
+                <img />
+                <div>
+                    <p>
+                        Access to a variety of lyrics with their accompanying songs across many genres.
+                    </p>
+                </div>
+            </article>
+            <article class="column">
+                <img />
+                <div>
+                    <p>
+                        Learn the lyrics to you favorite songs fast.
+                    </p>
+                </div>
+            </article>
+            <article class="column">
+                <img />
+                <div>
+                    <p>
+                        Save all your song searches in your library.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
     <footer id="footer" class="footer ml-auto p-0">
         <div class="content has-text-centered is-justify-content-space-around has-text-grey">
-          <p>
-            <strong>MusicBox</strong> Master Minds: <a class="has-text-grey" href="https://jgthms.com">Chloe Y., Nicole B., Hae K</a>.
-            <a class="has-text-grey" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">&copy; 2022 MusicBox, Inc</a>.
-          </p>
+            <p>
+                <strong>MusicBox</strong> Master Minds: <a class="has-text-grey" href="https://jgthms.com">Chloe Y.,
+                    Nicole B., Hae K</a>.
+                <a class="has-text-grey" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">&copy; 2022 MusicBox,
+                    Inc</a>.
+            </p>
         </div>
-      </footer>
+    </footer>
 
-      <script src="./assets/scripts.js"></script>
+    <script src="./assets/scripts.js"></script>
 </body>
 
 </html>

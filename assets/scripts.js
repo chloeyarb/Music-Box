@@ -47,13 +47,13 @@ var getLyrics = function (user) {
 
 
     .catch(function (error) {
+// may need to  be more specific with this search
       alert("No lyrics found!");
       console.log(error)
     })
 
 
 }
-
 
 
 searchButton.addEventListener("click", buttonClickHandler);
