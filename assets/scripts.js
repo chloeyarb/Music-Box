@@ -1,3 +1,4 @@
+
 var inputEl = document.querySelector("#form");
 var searchButton = document.querySelector("#btn");
 var songs = document.querySelector("#songs");
@@ -17,6 +18,7 @@ var buttonClickHandler = function (event) {
   songName = songs.value.trim();
   artistName = artists.value.trim();
   gif = showGif.value;
+  hiddenArea.style.display ='none';
   getLyrics();
   hiddenArea.style.display ='none';
   getGifs();
