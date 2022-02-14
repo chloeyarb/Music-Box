@@ -6,11 +6,9 @@ var showLyrics = document.querySelector("#results");
 var showGif = document.querySelector("#gif")
 var songName;
 var artistName;
-<<<<<<< HEAD
 var hiddenArea =document.querySelector("#container");
-=======
 var gif; 
->>>>>>> feature/nicole-modal
+
 
 
 var buttonClickHandler = function (event) {
@@ -20,21 +18,16 @@ var buttonClickHandler = function (event) {
   artistName = artists.value.trim();
   gif = showGif.value;
   getLyrics();
-<<<<<<< HEAD
   hiddenArea.style.display ='none';
-=======
   getGifs();
->>>>>>> feature/nicole-modal
 };
 
 
 var getLyrics = function (user) {
   var apiUrl = "https://api.lyrics.ovh/v1/" + artistName + "/" + songName;
-
   fetch(apiUrl)
     .then(function (response) {
       console.log(response)
-
       return response.json();
     })
 
@@ -64,18 +57,15 @@ var getLyrics = function (user) {
 }
 
 
-
-
 var getGifs = function (user) {
   var apiUrl = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&limit=5&api_key=PG8eCoEPPQI1vv1ejnkKITTC5ZvzG1EU";
 
   fetch(apiUrl)
     .then(function (response) {
 
-
       return response.json();
-
     })
+
     .then(function (data) {
       console.log(data.data)
 
@@ -93,12 +83,9 @@ var getGifs = function (user) {
 }
 
 
-
 // // may need to  be more specific with this search
 //       alert("No lyrics found!");
 //       console.log(error)
-
-
 
 
 searchButton.addEventListener("click", buttonClickHandler);
