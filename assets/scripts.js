@@ -1,16 +1,18 @@
 
+/* VARIABLES */
+
 var inputEl = document.querySelector("#form");
 var searchButton = document.querySelector("#btn");
 var songs = document.querySelector("#songs");
 var artists = document.querySelector("#artist");
 var showLyrics = document.querySelector("#results");
 var showGif = document.querySelector("#gif")
-let songName = songs.value;
-let artistName = artists.value;
-var hiddenArea =document.querySelector("#container");
-var gif; 
+var songName = songs.value;
+var artistName = artists.value;
+var hiddenArea = document.querySelector("#container");
+var gif;
 
-//get modal element
+/* MODAL */
 var modal = document.getElementById('simpleModal');
 //get open modal button
 var modalBtn = document.getElementById('modalBtn');
@@ -26,38 +28,38 @@ closeBtn.addEventListener('click', closeModal);
 //Listen for outside click
 window.addEventListener('click', clickOutside);
 // funtion to open modal
-function openModal(){
-    modal.style.display = 'block';
+function openModal() {
+  modal.style.display = 'block';
 }
 
 // function to close modal
-function closeModal(){
-    modal.style.display = 'none';
+function closeModal() {
+  modal.style.display = 'none';
 }
 
 // function to close modal if outside it clicked
-function clickOutside(event){
- if (event.target === modal){
+function clickOutside(event) {
+  if (event.target === modal) {
     modal.style.display = 'none';
- }
+  }
 }
-
+/* LISTENER EVENT FOR SEARCH BUTTON */
 var buttonClickHandler = function (event) {
   event.preventDefault();
   //value needed form api search
   songName = songs.value.trim();
   artistName = artists.value.trim();
   gif = showGif.value;
-  hiddenArea.style.display ='none';
+  hiddenArea.style.display = 'none';
   getLyrics();
-  hiddenArea.style.display ='none';
+  hiddenArea.style.display = 'none';
   getGifs();
   // localStorage.setItem('songName', 'songs.value');
   // console.log(localStorage);
-  
+
 };
 
-
+/* LYRIC API */
 var getLyrics = function (user) {
   var apiUrl = "https://api.lyrics.ovh/v1/" + artistName + "/" + songName;
   fetch(apiUrl)
@@ -90,7 +92,7 @@ var getLyrics = function (user) {
     })
 }
 
-
+/* GIF API */
 var getGifs = function (user) {
   var apiUrl = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&limit=5&api_key=PG8eCoEPPQI1vv1ejnkKITTC5ZvzG1EU";
 
@@ -114,34 +116,36 @@ var getGifs = function (user) {
       showGif.appendChild(p);
     })
     .catch(function (error) {
+      //       alert("No lyrics found!");
+      //       console.log(error)
     });
 }
+// /* LOCAL STORAGE */
+// var yourFavoriteSongs = function () {
 
-var yourFavorites = function() {
-  
-  JSON.parse(window.localStorage.getItem('allSearch')) || [];
-  window.localStorage.setItem('allSearch', JSON.stringify());
-  console.log(yourFavorites);
+//   JSON.parse(window.localStorage.getItem('songName', 'songs')) || [];
+//   window.localStorage.setItem('songName', 'songs');
+//   // window.localStorage.setItem('allSearch', JSON.stringify());
+//   // console.log(yourFavorites);
 
-  var artistInput = artistName;
-
-  var allSearch = [];
+//   songName = songs.value.trim();
 
 
-  // var search = {
-  //   'artistInput': artistInput,
-  // }
-  allSearch.push(artistInput);
+//   // var artistInput = artistName;
 
-}
+//   // var allSearch = [];
 
+
+//   // var search = {
+//   //   'artistInput': artistInput,
+//   // }
+//   // allSearch.push(artistInput);
+
+// }
 
 // yourFavorites();
 
 
-// // may need to  be more specific with this search
-//       alert("No lyrics found!");
-//       console.log(error)
 
 
 searchButton.addEventListener("click", buttonClickHandler);
