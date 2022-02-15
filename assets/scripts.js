@@ -5,8 +5,8 @@ var songs = document.querySelector("#songs");
 var artists = document.querySelector("#artist");
 var showLyrics = document.querySelector("#results");
 var showGif = document.querySelector("#gif")
-var songName;
-var artistName;
+let songName = songs.value;
+let artistName = artists.value;
 var hiddenArea =document.querySelector("#container");
 var gif; 
 
@@ -52,6 +52,9 @@ var buttonClickHandler = function (event) {
   getLyrics();
   hiddenArea.style.display ='none';
   getGifs();
+  // localStorage.setItem('songName', 'songs.value');
+  // console.log(localStorage);
+  
 };
 
 
@@ -83,7 +86,7 @@ var getLyrics = function (user) {
     .catch(function (error) {
       // may need to  be more specific with this search
       alert("No lyrics found!");
-      console.log(error)
+      // console.log(error)
     })
 }
 
@@ -99,7 +102,7 @@ var getGifs = function (user) {
 
     .then(function (data) {
       // console.log(data.data)
-      console.log(data.data[0].images.preview_webp.url)
+      // console.log(data.data[0].images.preview_webp.url)
 
       var div = document.createElement("div")
       var p = document.createElement("img");
@@ -113,6 +116,27 @@ var getGifs = function (user) {
     .catch(function (error) {
     });
 }
+
+var yourFavorites = function() {
+  
+  JSON.parse(window.localStorage.getItem('allSearch')) || [];
+  window.localStorage.setItem('allSearch', JSON.stringify());
+  console.log(yourFavorites);
+
+  var artistInput = artistName;
+
+  var allSearch = [];
+
+
+  // var search = {
+  //   'artistInput': artistInput,
+  // }
+  allSearch.push(artistInput);
+
+}
+
+
+// yourFavorites();
 
 
 // // may need to  be more specific with this search
