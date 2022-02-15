@@ -23,10 +23,10 @@
         </header>
         <div class="pr-6 navbar-end is-justify-content-space-evenly	">
             <!-- <span>|</span> -->
-            <a class="navbar-item has-text-white" href="#about">About</a>
-            <a class="navbar-item has-text-white" href="#search-music">Search</a>
+            <!-- <a  class="navbar-item has-text-white"><button id="modalBtn" class="b-style">About</button></a> -->
+            <!-- <a class="navbar-item has-text-white" href="#search-music">Search</a> -->
             <a class="navbar-item has-text-white" href="#your-favorites">Your Favorites</a>
-
+            <a  id="modalBtn" class="navbar-item has-text-white b-style">About</a>
         </div>
     </nav>
 
@@ -34,69 +34,78 @@
     <!--Hero-->
     <section id="hero-intro" class="columns is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start">
 
-        <div id="container" class="m-auto column has-text-left">
-            <h2 class="is-size-3 has-text-centered"> Welcome to the lyric library for music enthusiasts! </h2>
-            <p class="is-italic has-text-centered"> Look up the lyrics to your favorite songs</p>
-            <form id="form" action="">
-                <input id="artist" class="input" type="text" placeholder="Artist name...">
-                <input id="songs" class="input" type="text" placeholder="Song title...">
-                <button id="btn" class="button-area button is-small button is-rounded mgl-medium">Search
-                    Library</button>
-            </form>
-        </div>
-        <!--Lyrics appear here-->
-        <div id="results">
-            <div>
-                <a href="##" onClick="history.go(-1); return false;">Go Back</a>
-            </div>
-        </div>
-        <div class="column p-5">
-            <img src="./assets/images/Hero.png" alt="girl with headphones">
-        </div>
+    <div id="container"class="m-auto column has-text-left">
+        <h2 class="is-size-3 has-text-centered"> Welcome to the lyric library for music enthusiasts! </h2>
+        <p class="is-italic has-text-centered"> Look up the lyrics to your favorite songs</p>
+        <form class=" pt-5 columns is-justify-content-center" id="form"action="">
+            <input id="artist" class="input" type="text" placeholder="Artist name...">
+            <input id="songs" class="input" type="text" placeholder="Song title...">
+            <button id="btn" class="button-area button has-text-weight-normal has-text-white is-normal ">Search Library</button> 
+        </form>
+    </div>
+     <!--Lyrics appear here-->
+     <div id="results">
+ 
+    </div> 
+    <div class="column p-5">
+        <img src="./assets/images/Hero.png" alt="girl with headphones">
+    </div>
     </section>
-    <!--Hero End-->
+<!--Hero End-->
 
 
-    <!--modal for error-->
+    <!--Lyrics appear here-->
     <section id="results">
 
     </section>
     <section id="gif"></section>
-    <!--About Section-->
-    <section class="is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start">
+ 
+<!--ABOUT MODAL-->
+    <div id="simpleModal" class="mo-dal">
+        <div class="modal-c">
+            <div class="modal-h">
+                <span class="cBtn">&times;</span>
+                <div id="about" class="m-auto has-text-centered pt-4 mb-4 pb-4">
+                    <h2 class="is-size-1 has-text-black has-text-weight-bold">About</h2>
+                    <p class="is-size-4 has-text-black"> Ready to make a free trial?</p>
+                </div>
+            </div>
+            <div class="modal-bo">
+                <section class="columns pb-6 pt-6 is-flex-wrap-wrap is-justify-content-center is-justify-content-space-evenly">
+                    <div class="card  card-color about-cards">
+                      <div class=" card-content">
+                          <p class="is-size-2">🎧</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Access to a variety of lyrics.
+                        </div>
+                        
+                      </div>
+                    </div>
+              
+                    <div class="card card-color about-cards">
+                      <div class="card-content">
+                          <p class="is-size-2">📸</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Find gifs of your favorite Artists.
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="card card-color about-cards">
+                      <div class="card-content about-cards">
+                          <p class="is-size-2">🎹</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Save all your searches in your library.
+                      </div>
+                      </div>
+                    </div>
+                  </section>
+            </div>
 
-        <div id="about" class="m-auto has-text-centered">
-            <h2>About</h2>
-            <p> Ready to make a free trial?</p>
         </div>
+    </div>
 
-        <div class="columns">
-            <article class="column">
-                <img />
-                <div>
-                    <p>
-                        Access to a variety of lyrics with their accompanying songs across many genres.
-                    </p>
-                </div>
-            </article>
-            <article class="column">
-                <img />
-                <div>
-                    <p>
-                        Learn the lyrics to you favorite songs fast.
-                    </p>
-                </div>
-            </article>
-            <article class="column">
-                <img />
-                <div>
-                    <p>
-                        Save all your song searches in your library.
-                    </p>
-                </div>
-            </article>
-        </div>
-    </section>
+    <!--FOOTER-->
     <footer id="footer" class="footer ml-auto p-0">
         <div class="content has-text-centered is-justify-content-space-around has-text-grey">
             <p>

@@ -104,6 +104,9 @@ nav{
     color:#ea9527;
 } */
 
+#btn {
+    background-color: #EA9629;
+}
 #results {
     display: block;
     }
@@ -122,32 +125,101 @@ nav{
     
     }
 
-    /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+
+  .about-cards {
+      width: 200px;
+      height: 200px;
+      text-align: center;
+  }
+
+  .card-color {
+      background-color: white;
+  }
+
+ /********* MODAL************/
+
+/* button style */
+.b-style {
+    background: black;
+    /* padding: 1em 2em;
+    color: white;
+    border: 0;
+    font-size: 26px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px; */
+
+}
+
+.b-style:hover {
+    background: #EA9629;
+}
+
+/* modal style */
+.mo-dal {
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  }
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.modal-c {
+    background-color: #f4f4f4;
+    /* 20% is how far down the modal will appear in the window/ auto is left and right*/
+    margin: 20% auto;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2),0 7px 20px 0 rgba(0,0,0, 0.17);
+    /* for key frame // fade in*/
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.modal-h {
+ background-color: white;
+ padding: 15px;
+ color: white;
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+}
+
+.modal-h h2 {
+  font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.modal-bo {
+  font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+}
+
+.modal-bo span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.cBtn {
+    color: #ccc;
+    float:right;
+    font-size: 30px;
+    color: white;
+    
+}
+
+.cBtn:hover, .cBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* key frame */
+@keyframes modalopen {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
