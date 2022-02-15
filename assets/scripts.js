@@ -121,6 +121,17 @@ var getGifs = function (user) {
     });
 }
 // /* LOCAL STORAGE */
+// session storage
+
+var person = {
+  
+}
+
+
+
+
+
+
 // var yourFavoriteSongs = function () {
 
 //   JSON.parse(window.localStorage.getItem('songName', 'songs')) || [];
