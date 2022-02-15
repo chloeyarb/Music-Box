@@ -58,7 +58,10 @@ footer div {
     padding:28px 17px;
     font-weight: 700;
 }
-.button-area{
+#your-favorites:hover {
+    color: #EA9629;
+}
+/* .button-area{
     text-align: center;
 }
 .button-style{
@@ -68,7 +71,7 @@ footer div {
 }
 .button-style:hover{
     transform:scale(1.2);
-}
+} */
 /* h1 {
     font-size: 40px;
     padding-right: 100px;

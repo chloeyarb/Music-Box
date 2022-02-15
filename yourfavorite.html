@@ -2,16 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MusicBox</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
     <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link href="./assets/styles.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -22,45 +17,20 @@
             <h1 class="is-size-3 pl-6">MusicBox <i class="fa fa-thin fa-icons fa-sm" id="icon"></i></h1>
         </header>
         <div class="pr-6 navbar-end is-justify-content-space-evenly	">
-            <!-- <span>|</span> -->
-            <!-- <a  class="navbar-item has-text-white"><button id="modalBtn" class="b-style">About</button></a> -->
-            <!-- <a class="navbar-item has-text-white" href="#search-music">Search</a> -->
-            <a id="your-favorites" class="navbar-item has-text-white" href="./yourfavorite.html">Your Favorites</a>
-            <a  id="modalBtn" class="navbar-item has-text-white b-style">About</a>
+            <a href="./homepage.html" id="btn-back" class="navbar-item has-text-white b-style">Home</a>
+            <a id="modalBtn" class="navbar-item has-text-white b-style">About</a>
         </div>
     </nav>
 
-
-    <!--Hero-->
-    <section id="hero-intro" class="columns is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start">
-
-    <div id="container"class="m-auto column has-text-left">
-        <h2 class="is-size-3 has-text-centered"> Welcome to the lyric library for music enthusiasts! </h2>
-        <p class="is-italic has-text-centered"> Look up the lyrics to your favorite songs</p>
-        <form class=" pt-5 columns is-justify-content-center" id="form"action="">
-            <input id="artist" class="input" type="text" placeholder="Artist name...">
-            <input id="songs" class="input" type="text" placeholder="Song title...">
-            <button id="btn" class="button-area button has-text-weight-normal has-text-white is-normal ">Search Library</button> 
-        </form>
+    <div id="container" class="m-auto column">
+        <h2 class="is-italic has-text-centered">Welcome to your Lyric Library</h2>
     </div>
-     <!--Lyrics appear here-->
-     <div id="results">
- 
-    </div> 
-    <div class="column p-5">
-        <img src="./assets/images/Hero.png" alt="girl with headphones">
-    </div>
+<!--Lyrics will appear here-->
+    <section id="lyrics-display">
+        <p> </p>
     </section>
-<!--Hero End-->
 
-
-    <!--Lyrics appear here-->
-    <section id="results">
-
-    </section>
-    <section id="gif"></section>
- 
-<!--ABOUT MODAL-->
+<!--Modal-->
     <div id="simpleModal" class="mo-dal">
         <div class="modal-c">
             <div class="modal-h">
@@ -106,7 +76,7 @@
     </div>
 
     <!--FOOTER-->
-    <footer id="footer" class="footer ml-auto p-0">
+    <footer id="footer" class="footer ml-auto pt-10">
         <div class="content has-text-centered is-justify-content-space-around has-text-grey">
             <p>
                 <strong>MusicBox</strong> Master Minds: <a class="has-text-grey" href="https://jgthms.com">Chloe Y.,
@@ -116,7 +86,6 @@
             </p>
         </div>
     </footer>
-
     <script src="./assets/scripts.js"></script>
 </body>
 
