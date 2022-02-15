@@ -8,6 +8,7 @@ var showGif = document.querySelector("#gif")
 var songName;
 var artistName;
 var hiddenArea =document.querySelector("#container");
+var lyricsDisplay = document.querySelector("#lyrics-display");
 var gif; 
 
 //get modal element
@@ -51,6 +52,10 @@ var buttonClickHandler = function (event) {
   getLyrics();
   hiddenArea.style.display ='none';
   getGifs();
+
+  console.log('Working')
+  yourFavoriteSongs(songName, artistName);
+  console.log('Still Working')
 };
 
 
@@ -112,6 +117,33 @@ var getGifs = function (user) {
     .catch(function (error) {
     });
 }
+
+//for (var i=0; i < 5; i++) {}
+
+// /* LOCAL STORAGE */
+var yourFavoriteSongs = function (songName, artistName) {
+
+  var allSearch = JSON.parse(window.localStorage.getItem("allSearch")) || [];
+
+  var newSong = {
+    songName: songName,
+    artistName: artistName
+  }
+
+  allSearch.push(newSong)
+
+  //JSON.parse(window.localStorage.getItem('songName')) || [];
+  //window.localStorage.setItem('songName', songs);
+  window.localStorage.setItem('allSearch', JSON.stringify(allSearch));  
+}
+
+// var savedFavoriteSongs = function (){
+
+//   lyricsDisplay.textContent = JSON.parse(window.localStorage.getItem('songName')) || [];
+// }
+// savedFavoriteSongs();
+//yourFavorites();
+
 
 
 // // may need to  be more specific with this search
