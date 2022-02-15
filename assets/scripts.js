@@ -115,11 +115,6 @@ var getGifs = function (user) {
 }
 
 
-// // may need to  be more specific with this search
-//       alert("No lyrics found!");
-//       console.log(error)
-
-
 searchButton.addEventListener("click", buttonClickHandler);
 
 
