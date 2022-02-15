@@ -47,7 +47,6 @@ var buttonClickHandler = function (event) {
   //value needed form api search
   songName = songs.value.trim();
   artistName = artists.value.trim();
-  gif = showGif.value;
   hiddenArea.style.display ='none';
   getLyrics();
   hiddenArea.style.display ='none';
@@ -89,7 +88,7 @@ var getLyrics = function (user) {
 
 
 var getGifs = function (user) {
-  var apiUrl = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&limit=5&api_key=PG8eCoEPPQI1vv1ejnkKITTC5ZvzG1EU";
+  var apiUrl = "https://api.giphy.com/v1/gifs/search?q=" + artistName + "&limit=5&api_key=PG8eCoEPPQI1vv1ejnkKITTC5ZvzG1EU";
 
   fetch(apiUrl)
     .then(function (response) {
@@ -98,14 +97,14 @@ var getGifs = function (user) {
     })
 
     .then(function (data) {
-      // console.log(data.data)
-      console.log(data.data[0].images.preview_webp.url)
+      console.log(data.data)
+      // console.log(data.data[0].images.preview_webp.url)
 
       var div = document.createElement("div")
       var p = document.createElement("img");
 
       div.textContent = artistName;
-      p.src = data.data[1,2,3].images.preview_webp.url;
+      p.src = data.data[0].images.preview_webp.url;
 
       showGif.appendChild(div);
       showGif.appendChild(p);
