@@ -105,7 +105,7 @@ var getGifs = function (user) {
       var p = document.createElement("img");
 
       div.textContent = artistName;
-      p.src = data.data[0].images.preview_webp.url;
+      p.src = data.data[1,2,3].images.preview_webp.url;
 
       showGif.appendChild(div);
       showGif.appendChild(p);
