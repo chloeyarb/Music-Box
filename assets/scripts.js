@@ -59,13 +59,12 @@ var getLyrics = function (user) {
   var apiUrl = "https://api.lyrics.ovh/v1/" + artistName + "/" + songName;
   fetch(apiUrl)
     .then(function (response) {
-      console.log(response)
       return response.json();
     })
 
     .then(function (data) {
-      console.log("data", data);
-      console.log(data.lyrics);
+      // console.log("data", data);
+      // console.log(data.lyrics);
 
       //function call to display
       //create modals
@@ -99,13 +98,14 @@ var getGifs = function (user) {
     })
 
     .then(function (data) {
-      console.log(data.data)
+      // console.log(data.data)
+      console.log(data.data[0].images.preview_webp.url)
 
       var div = document.createElement("div")
-      var p = document.createElement("p");
+      var p = document.createElement("img");
 
       div.textContent = artistName;
-      p.textContent = data;
+      p.src = data.data[0].images.preview_webp.url;
 
       showGif.appendChild(div);
       showGif.appendChild(p);
