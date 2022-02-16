@@ -192,6 +192,9 @@ footer div {
     cursor: pointer;
 }
 
+#gif {
+    margin-right: 5px;
+}
 
 /* key frame */
 @keyframes modalopen {

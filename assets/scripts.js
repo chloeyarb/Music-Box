@@ -5,6 +5,7 @@ var songs = document.querySelector("#songs");
 var artists = document.querySelector("#artist");
 var showLyrics = document.querySelector("#results");
 var showGif = document.querySelector("#gif")
+var headphoneImg=document.querySelector("#headphone");
 var songName;
 var artistName;
 var hiddenArea =document.querySelector("#container");
@@ -51,8 +52,8 @@ var buttonClickHandler = function (event) {
   hiddenArea.style.display ='none';
   getLyrics();
   hiddenArea.style.display ='none';
+  headphoneImg.style.display='none';
   getGifs();
-
   console.log('Working')
   yourFavoriteSongs(songName, artistName);
   console.log('Still Working')
