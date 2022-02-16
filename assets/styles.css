@@ -65,7 +65,9 @@ footer div {
 }
 #results {
     display: block;
+    padding: 20px;
     }
+    
     
     #results p {
         white-space: pre-wrap;
@@ -193,7 +195,8 @@ footer div {
 }
 
 #gif {
-    margin-right: 5px;
+    padding-right: 20px;
+    max-width: 300px;
 }
 
 /* key frame */
