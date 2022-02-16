@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <nav id="nav-color" class="navbar is-flex-direction-row" role="navigation">
+        <header>
+            <h1 class="is-size-3 pl-6">MusicBox <i class="fa fa-thin fa-icons fa-sm" id="icon"></i></h1>
+        </header>
+        <div class="pr-6 navbar-end is-justify-content-space-evenly	">
+            <a href="../homepage.html" id="btn-back" class="navbar-item has-text-white b-style">Home</a>
+            <a id="modalBtn" class="navbar-item has-text-white b-style">About</a>
+        </div>
+    </nav>
+
+    <div id="container" class="m-auto column">
+        <h2 class="is-italic has-text-centered">Welcome to your Lyric Library</h2>
+    </div>
+<!--Lyrics will appear here-->
+    <section id="lyrics-display" class="m-auto column has-text-centered"></section>
+
+<!--Modal-->
+    <div id="simpleModal" class="mo-dal">
+        <div class="modal-c">
+            <div class="modal-h">
+                <span class="cBtn">&times;</span>
+                <div id="about" class="m-auto has-text-centered pt-4 mb-4 pb-4">
+                    <h2 class="is-size-1 has-text-black has-text-weight-bold">About</h2>
+                    <p class="is-size-4 has-text-black">Ready for a free trial?</p>
+                </div>
+            </div>
+            <div class="modal-bo">
+                <section class="columns pb-6 pt-6 is-flex-wrap-wrap is-justify-content-center is-justify-content-space-evenly">
+                    <div class="card  card-color about-cards">
+                      <div class=" card-content">
+                          <p class="is-size-2">🎧</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Access to a variety of lyrics.
+                        </div>
+                        
+                      </div>
+                    </div>
+              
+                    <div class="card card-color about-cards">
+                      <div class="card-content">
+                          <p class="is-size-2">📸</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Find gifs of your favorite Artists.
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="card card-color about-cards">
+                      <div class="card-content about-cards">
+                          <p class="is-size-2">🎹</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Save all your searches in your library.
+                      </div>
+                      </div>
+                    </div>
+                  </section>
+            </div>
+
+        </div>
+    </div>
+    <script src="./library.js"></script>
+</body>
+
+</html>

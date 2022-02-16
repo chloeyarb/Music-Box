@@ -1,0 +1,203 @@
+:root {
+    background-color: black;
+    color: white;
+}
+
+#icon {
+    color: grey;
+}
+
+body{
+    margin:0px;   
+    font-family: Circular,spotify-circular, Helvetica,Arial,sans-serif;
+    color:white;
+}
+
+#nav-color {
+    background-color: black;
+}
+
+#hero-intro {
+    display: flex;
+    background-color: white;
+    margin: 25px;
+    color: black;
+}
+
+
+input[type="text"] {
+    width: 200px;
+}
+
+
+section img{
+    width: 550px;
+}
+
+#footer {
+    background-color: black;
+    margin-bottom: 0px;
+}
+footer{
+    /* height:530px; */
+    background-color:black;
+    width: 80%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}        
+footer h2 {
+    font-size: 30px;   
+    margin: 0;
+}
+footer div {
+    line-height: 1.5;
+    text-align: right;
+}
+.nav-item{
+    padding:28px 17px;
+    font-weight: 700;
+}
+
+#btn {
+    background-color: #EA9629;
+}
+#results {
+    display: block;
+    }
+    
+    #results p {
+        white-space: pre-wrap;
+    }
+    
+    #results h3 {
+        font-size: 35px;
+        font-weight: bolder;
+        text-transform: capitalize;
+        color:#EA9629;
+        line-height: 1.5;
+        padding-bottom: 5px;
+    
+    }
+
+/*Style favorites*/
+#lyrics-display {
+    /* display: block;
+   align-items: center; */
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color:#EA9629;
+    line-height: 1.5;
+    margin-left: 200px;
+    max-width: 100%;
+}
+
+#lyrics-display p {
+    padding-left: 5px;
+    
+}
+ /*End favorites*/
+
+
+.about-cards {
+      width: 200px;
+      height: 200px;
+      text-align: center;
+  }
+
+  .card-color {
+      background-color: white;
+  }
+
+ /********* MODAL************/
+
+/* button style */
+.b-style {
+    background: black;
+    /* padding: 1em 2em;
+    color: white;
+    border: 0;
+    font-size: 26px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px; */
+
+}
+
+.b-style:hover {
+    background: #EA9629;
+}
+
+/* modal style */
+.mo-dal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.modal-c {
+    background-color: #f4f4f4;
+    /* 20% is how far down the modal will appear in the window/ auto is left and right*/
+    margin: 20% auto;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2),0 7px 20px 0 rgba(0,0,0, 0.17);
+    /* for key frame // fade in*/
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.modal-h {
+ background-color: white;
+ padding: 15px;
+ color: white;
+ text-align: center;
+ font-family: 'Montserrat', sans-serif;
+}
+
+.modal-h h2 {
+  font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.modal-bo {
+  font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+}
+
+.modal-bo span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.cBtn {
+    color: #ccc;
+    float:right;
+    font-size: 30px;
+    color: white;
+    
+}
+
+.cBtn:hover, .cBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#gif {
+    margin-right: 5px;
+}
+
+/* key frame */
+@keyframes modalopen {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}

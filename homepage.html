@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicBox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="./assets/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <nav id="nav-color" class="navbar is-flex-direction-row" role="navigation">
+        <header>
+            <h1 class="is-size-3 pl-6">MusicBox <i class="fa fa-thin fa-icons fa-sm" id="icon"></i></h1>
+        </header>
+        <div class="pr-6 navbar-end is-justify-content-space-evenly	">
+            <a id="your-favorites" class="navbar-item has-text-white" href="./assets/yourfavorite.html">Your Favorites</a>
+            <a  id="modalBtn" class="navbar-item has-text-white b-style">About</a>
+            <a class="navbar-item has-text-white" href="./homepage.html">Home</a>
+        </div>
+    </nav>
+
+
+    <!--Hero-->
+    <section id="hero-intro" class="columns is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start">
+
+    <div id="container"class="m-auto column has-text-left">
+        <h2 class="is-size-3 has-text-centered"> Welcome to the lyric library for music enthusiasts! </h2>
+        <p class="is-italic has-text-centered"> Look up the lyrics to your favorite songs</p>
+        <form class=" pt-5 columns is-justify-content-center" id="form"action="">
+            <input id="artist" class="input" type="text" placeholder="Artist name...">
+            <input id="songs" class="input" type="text" placeholder="Song title...">
+            <button id="btn" class="button-area button has-text-weight-normal has-text-white is-normal ">Search Library</button> 
+        </form>
+    </div>
+     <!--Lyrics appear here-->
+     <div id="results">
+ 
+    </div> 
+    <div class="column p-5">
+        <img id="headphone"src="./assets/images/Hero.png" alt="girl with headphones">
+    </div>
+    <section id="gif"></section>
+    </section>
+<!--Hero End-->
+
+    
+ 
+<!--ABOUT MODAL-->
+    <div id="simpleModal" class="mo-dal">
+        <div class="modal-c">
+            <div class="modal-h">
+                <span class="cBtn">&times;</span>
+                <div id="about" class="m-auto has-text-centered pt-4 mb-4 pb-4">
+                    <h2 class="is-size-1 has-text-black has-text-weight-bold">About</h2>
+                    <p class="is-size-4 has-text-black">Ready for a free trial?</p>
+                </div>
+            </div>
+            <div class="modal-bo">
+                <section class="columns pb-6 pt-6 is-flex-wrap-wrap is-justify-content-center is-justify-content-space-evenly">
+                    <div class="card  card-color about-cards">
+                      <div class=" card-content">
+                          <p class="is-size-2">🎧</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Access to a variety of lyrics.
+                        </div>
+                        
+                      </div>
+                    </div>
+              
+                    <div class="card card-color about-cards">
+                      <div class="card-content">
+                          <p class="is-size-2">📸</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Find gifs of your favorite Artists.
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="card card-color about-cards">
+                      <div class="card-content about-cards">
+                          <p class="is-size-2">🎹</p>
+                        <div class="content pt-4 has-text-weight-bold is-size-5">
+                          Save all your searches in your library.
+                      </div>
+                      </div>
+                    </div>
+                  </section>
+            </div>
+
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer id="footer" class="footer ml-auto p-0">
+        <div class="content has-text-centered is-justify-content-space-around has-text-grey">
+            <p>
+                <strong>MusicBox</strong> Master Minds: <a class="has-text-grey" href="https://jgthms.com">Chloe Y.,
+                    Nicole B., Hae K</a>.
+                <a class="has-text-grey" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">&copy; 2022 MusicBox,
+                    Inc</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./assets/scripts.js"></script>
+</body>
+
+</html>
