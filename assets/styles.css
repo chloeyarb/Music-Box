@@ -63,9 +63,6 @@ footer div {
 #btn {
     background-color: #EA9629;
 }
-#results {
-    display: block;
-    }
     
     #results p {
         white-space: pre-wrap;
@@ -191,10 +188,16 @@ footer div {
     text-decoration: none;
     cursor: pointer;
 }
-
+/*
 #gif {
     margin-right: 5px;
+}*/
+
+.lyric-center {
+    display:flex;
+    justify-content: space-between;
 }
+
 
 /* key frame */
 @keyframes modalopen {

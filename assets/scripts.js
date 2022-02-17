@@ -67,7 +67,7 @@ var getLyrics = function (user) {
       return response.json();
     })
 
-    .then(function (data) {
+    .then(function (data) { 
       // console.log("data", data);
       // console.log(data.lyrics);
 
