@@ -65,10 +65,6 @@ footer div {
 #btn {
     background-color: #EA9629;
 }
-
-#results {
-    display: block;
-    }
     
     #results p {
         white-space: pre-wrap;
@@ -85,8 +81,6 @@ footer div {
 
 /*Style favorites*/
 #lyrics-display {
-    /* display: block;
-   align-items: center; */
     font-size: 35px;
     font-weight: bolder;
     text-transform: capitalize;
@@ -169,10 +163,16 @@ footer div {
     text-decoration: none;
     cursor: pointer;
 }
-
+/*
 #gif {
     margin-right: 5px;
+}*/
+
+.lyric-center {
+    display:flex;
+    justify-content: space-between;
 }
+
 
 /* key frame */
 @keyframes modalopen {
