@@ -1,58 +1,59 @@
-
+// Variables
 var inputEl = document.querySelector("#form");
 var searchButton = document.querySelector("#btn");
 var songs = document.querySelector("#songs");
 var artists = document.querySelector("#artist");
 var showLyrics = document.querySelector("#results");
 var showGif = document.querySelector("#gif")
-var headphoneImg=document.querySelector("#headphone");
+var headphoneImg = document.querySelector("#headphone");
 var songName;
 var artistName;
-var hiddenArea =document.querySelector("#container");
+var hiddenArea = document.querySelector("#container");
 var lyricsDisplay = document.querySelector("#lyrics-display");
-var gif; 
+var gif;
 
-//get modal element
+// Modal Variables
 var modal = document.getElementById('simpleModal');
-//get open modal button
+
 var modalBtn = document.getElementById('modalBtn');
-// get close button
+
 var closeBtn = document.getElementsByClassName('cBtn')[0];
 
 
-//Listen for open  click
+
 modalBtn.addEventListener('click', openModal);
-//Listen for close click
+
 closeBtn.addEventListener('click', closeModal);
 
-//Listen for outside click
+
 window.addEventListener('click', clickOutside);
-// funtion to open modal
-function openModal(){
-    modal.style.display = 'block';
+
+//Listening events to open and close modal
+function openModal() {
+  modal.style.display = 'block';
 }
 
-// function to close modal
-function closeModal(){
-    modal.style.display = 'none';
+
+function closeModal() {
+  modal.style.display = 'none';
 }
 
-// function to close modal if outside it clicked
-function clickOutside(event){
- if (event.target === modal){
+//Listening event for outside click of modal
+function clickOutside(event) {
+  if (event.target === modal) {
     modal.style.display = 'none';
- }
+  }
 }
 
 var buttonClickHandler = function (event) {
   event.preventDefault();
-  //value needed form api search
+
   songName = songs.value.trim();
   artistName = artists.value.trim();
-  hiddenArea.style.display ='none';
+  hiddenArea.style.display = 'none';
   getLyrics();
-  hiddenArea.style.display ='none';
-  headphoneImg.style.display='none';
+  hiddenArea.style.display = 'none';
+  headphoneImg.style.display = 'none';
   getGifs();
   console.log('Working')
   yourFavoriteSongs(songName, artistName);
@@ -68,11 +69,7 @@ var getLyrics = function (user) {
     })
 
     .then(function (data) {
-      // console.log("data", data);
-      // console.log(data.lyrics);
 
-      //function call to display
-      //create modals
       var h3 = document.createElement("h3")
       var p = document.createElement("p");
 
@@ -86,7 +83,7 @@ var getLyrics = function (user) {
 
 
     .catch(function (error) {
-      // may need to  be more specific with this search
+
       alert("No lyrics found!");
       console.log(error)
     })
@@ -104,7 +101,7 @@ var getGifs = function (user) {
 
     .then(function (data) {
       console.log(data.data)
-      // console.log(data.data[0].images.preview_webp.url)
+
 
       var div = document.createElement("div")
       var p = document.createElement("img");
@@ -119,7 +116,6 @@ var getGifs = function (user) {
     });
 }
 
-//for (var i=0; i < 5; i++) {}
 
 // /* LOCAL STORAGE */
 var yourFavoriteSongs = function (songName, artistName) {
@@ -133,24 +129,9 @@ var yourFavoriteSongs = function (songName, artistName) {
 
   allSearch.push(newSong)
 
-  //JSON.parse(window.localStorage.getItem('songName')) || [];
-  //window.localStorage.setItem('songName', songs);
-  window.localStorage.setItem('allSearch', JSON.stringify(allSearch));  
+
+  window.localStorage.setItem('allSearch', JSON.stringify(allSearch));
 }
-
-// var savedFavoriteSongs = function (){
-
-//   lyricsDisplay.textContent = JSON.parse(window.localStorage.getItem('songName')) || [];
-// }
-// savedFavoriteSongs();
-//yourFavorites();
-
-
-
-// // may need to  be more specific with this search
-//       alert("No lyrics found!");
-//       console.log(error)
-
 
 searchButton.addEventListener("click", buttonClickHandler);
 
