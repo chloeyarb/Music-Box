@@ -17,7 +17,7 @@
 
 <body>
     <!--Nav Bar-->
-    <nav id="nav-color" class="navbar is-flex-direction-row" role="navigation">
+    <nav id="nav-color" class="navbar is-flex-direction-row is-mobile is-tablet" role="navigation">
         <header>
             <h1 class="is-size-3 pl-6">MusicBox <i class="fa fa-thin fa-icons fa-sm" id="icon"></i></h1>
         </header>
@@ -31,36 +31,36 @@
 
 
     <!--Hero-->
-    <section id="hero-intro" class="columns is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start">
+    <section id="hero-intro" class="columns is-flex-wrap-wrap is-justify-content-center is-align-items-flex-start is-mobile is-tablet">
 
-    <div id="container"class="m-auto column has-text-left">
-        <h2 class="is-size-3 has-text-centered"> Welcome to the lyric library for music enthusiasts! </h2>
-        <p class="is-italic has-text-centered"> Look up the lyrics to your favorite songs</p>
-        <form class=" pt-5 columns is-justify-content-center" id="form"action="">
-            <input id="artist" class="input" type="text" placeholder="Artist name...">
-            <input id="songs" class="input" type="text" placeholder="Song title...">
-            <button id="btn" class="button-area button has-text-weight-normal has-text-white is-normal ">Search Library</button> 
-        </form>
-    </div>
-    <div class="lyric-center">
-         <!--Lyrics appear here-->
-     <div id="results">
- 
-    </div> 
-    <div class="column p-5">
-        <img id="headphone"src="./assets/images/Hero.png" alt="girl with headphones">
-    </div>
-    <section id="gif"></section>
+        <div id="container" class="m-auto column has-text-left">
+            <h2 class="is-size-3 has-text-centered"> Welcome to the lyric library for music enthusiasts! </h2>
+            <p class="is-italic has-text-centered"> Look up the lyrics to your favorite songs</p>
+            <form class=" pt-5 columns is-justify-content-center" id="form" action="">
+                <input id="artist" class="input" type="text" placeholder="Artist name...">
+                <input id="songs" class="input" type="text" placeholder="Song title...">
+                <button id="btn" class="button-area button has-text-weight-normal has-text-white is-normal ">Search
+                    Library</button>
+            </form>
+        </div>
+        <div class="lyric-center">
+            <!--Lyrics appear here-->
+            <div id="results">
+
+            </div>
+            <div class="column p-5">
+                <img id="headphone" src="./assets/images/Hero.png" alt="girl with headphones">
+            </div>
+            <!--GIF appears here-->
+            <section id="gif"></section>
     </section>
 
     </div>
-    
-    
- 
-<!--ABOUT MODAL-->
-    <div id="simpleModal" class="mo-dal">
-        <div class="modal-c">
-            <div class="modal-h">
+
+    <!--ABOUT MODAL-->
+    <div id="simpleModal" class="mo-dal" class="is-mobile">
+        <div class="modal-c" >
+            <div class="modal-h" >
                 <span class="cBtn">&times;</span>
                 <div id="about" class="m-auto has-text-centered pt-4 mb-4 pb-4">
                     <h2 class="is-size-1 has-text-black has-text-weight-bold">About</h2>
@@ -104,7 +104,7 @@
     </div>
 
     <!--Footer-->
-    <footer id="footer" class="footer ml-auto p-0">
+    <footer id="footer" class="footer ml-auto p-0 is-mobile is-tablet">
         <div class="content has-text-centered is-justify-content-space-around has-text-grey">
             <p>
                 <strong>MusicBox</strong> Master Minds: <a class="has-text-grey" href="https://jgthms.com">Chloe Y.,

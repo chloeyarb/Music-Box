@@ -1,3 +1,7 @@
+//Variables
+var modal = document.getElementById('simpleModal');
+var modalBtn = document.getElementById('modalBtn');
+var closeBtn = document.getElementsByClassName('cBtn')[0];
 var lyricsDisplay = document.querySelector("#lyrics-display");
 
 // Local store for song library
@@ -19,26 +23,17 @@ var savedFavoriteSongs = function () {
 }
 savedFavoriteSongs();
 
-var modal = document.getElementById('simpleModal');
-//get open modal button
-var modalBtn = document.getElementById('modalBtn');
-// get close button
-var closeBtn = document.getElementsByClassName('cBtn')[0];
 
-
-//Listen for open  click
+//Listeners for modal
 modalBtn.addEventListener('click', openModal);
-//Listen for close click
 closeBtn.addEventListener('click', closeModal);
-
-//Listen for outside click
 window.addEventListener('click', clickOutside);
-// funtion to open modal
+
+
 function openModal() {
     modal.style.display = 'block';
 }
 
-// function to close modal
 function closeModal() {
     modal.style.display = 'none';
 }

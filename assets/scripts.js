@@ -12,28 +12,21 @@ var artistName;
 var hiddenArea = document.querySelector("#container");
 var lyricsDisplay = document.querySelector("#lyrics-display");
 var gif;
-
-//get modal element
 var modal = document.getElementById('simpleModal');
-//get open modal button
 var modalBtn = document.getElementById('modalBtn');
-// get close button
 var closeBtn = document.getElementsByClassName('cBtn')[0];
 
 
-//Listen for open  click
+//Listeners for modal
 modalBtn.addEventListener('click', openModal);
-//Listen for close click
 closeBtn.addEventListener('click', closeModal);
-
-//Listen for outside click
 window.addEventListener('click', clickOutside);
-// funtion to open modal
+
+
 function openModal() {
   modal.style.display = 'block';
 }
 
-// function to close modal
 function closeModal() {
   modal.style.display = 'none';
 }
@@ -45,10 +38,9 @@ function clickOutside(event) {
   }
 }
 
-// Listening Event
+//When search library button is clicked
 var buttonClickHandler = function (event) {
   event.preventDefault();
-  //value needed form api search
   songName = songs.value.trim();
   artistName = artists.value.trim();
   hiddenArea.style.display = 'none';
@@ -61,7 +53,7 @@ var buttonClickHandler = function (event) {
   console.log('Still Working')
 };
 
-// Lyric API
+// Lyric API function
 var getLyrics = function (user) {
   var apiUrl = "https://api.lyrics.ovh/v1/" + artistName + "/" + songName;
   fetch(apiUrl)
@@ -83,13 +75,13 @@ var getLyrics = function (user) {
     })
 
     .catch(function (error) {
-      // may need to  be more specific with this search
+
       alert("No lyrics found!");
       console.log(error)
     })
 }
 
-// Gif API
+// GIF API Function
 var getGifs = function (user) {
   var apiUrl = "https://api.giphy.com/v1/gifs/search?q=" + artistName + "&limit=5&api_key=PG8eCoEPPQI1vv1ejnkKITTC5ZvzG1EU";
 
@@ -115,7 +107,7 @@ var getGifs = function (user) {
     });
 }
 
-// /* LOCAL STORAGE */
+// LOCAL STORAGE
 var yourFavoriteSongs = function (songName, artistName) {
 
   var allSearch = JSON.parse(window.localStorage.getItem("allSearch")) || [];
